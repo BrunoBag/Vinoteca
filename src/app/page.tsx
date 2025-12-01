@@ -137,8 +137,9 @@ export default function Home() {
               </Link>
             </div>
             <div className="text-center">
-              <div className="text-9xl opacity-20">🏔️</div>
-              <p className="text-malbec-600 mt-4">Los Andes de Mendoza</p>
+              <div className="text-9xl opacity-80">
+                <img src="/assets/foto-tradición.jpg" alt="Tradición" className="rounded-lg" />
+              </div>
             </div>
           </div>
         </div>

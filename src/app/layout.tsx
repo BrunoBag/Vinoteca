@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WaveSeparator from "@/components/WaveSeparator";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({
         <main className="pt-20">
           {children}
         </main>
+        <WaveSeparator fillColor="#7a2e2a" height="h-4" type="wave1" />
         <Footer />
       </body>
     </html>
