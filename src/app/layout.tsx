@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="antialiased">
+      <body className="antialiased bg-vine-pattern">
         <Navigation />
         <main className="pt-20">
           {children}

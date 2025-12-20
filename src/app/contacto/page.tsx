@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ContactoPage() {
   return (
-    <div className="min-h-screen bg-cream-50">
+    <div className="min-h-screen bg-cream-50 bg-vine-pattern">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-wine-700 to-burgundy-800 text-white">
         <div className="container mx-auto px-4">
@@ -202,7 +202,7 @@ export default function ContactoPage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 bg-cream-100">
+      <section className="py-16 bg-cream-100 bg-vine-pattern">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-serif font-bold text-center text-malbec-800 mb-12">
@@ -245,7 +245,7 @@ export default function ContactoPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 bg-cream-200">
+      <section className="py-16 bg-cream-200 bg-vine-pattern">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-serif font-bold text-malbec-800 mb-8">

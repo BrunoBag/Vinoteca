@@ -3,6 +3,31 @@ import WaveSeparator from "@/components/WaveSeparator";
 import ElegantDivider from "@/components/ElegantDivider";
 import SectionDivider from "@/components/SectionDivider";
 
+
+const featuredWines = [
+  {
+    title: "Malbec",
+    description: "El orgullo de Mendoza. Intenso, robusto y con notas frutales que conquistan el paladar.",
+    image: "/assets/foto-malbec.jpg",
+    link: "/vinos#malbec",
+    linkText: "Ver Malbecs →"
+  },
+  {
+    title: "Cabernet Sauvignon",
+    description: "Elegante y estructurado, con taninos suaves y un final prolongado que perdura en el tiempo.",
+    image: "/assets/foto-cabernet.jpg",
+    link: "/vinos#cabernet",
+    linkText: "Ver Cabernets →"
+  },
+  {
+    title: "Chardonnay",
+    description: "Fresco y aromático, con notas cítricas y florales que reflejan el terroir mendocino.",
+    image: "/assets/foto-chardonnay.jpg",
+    link: "/vinos#chardonnay",
+    linkText: "Ver Chardonnays →"
+  }
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -43,7 +68,7 @@ export default function Home() {
       <WaveSeparator fillColor="#4d0218" height="h-15" type="wave1" />
 
       {/* Featured Wines Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-background bg-vine-pattern">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-serif font-bold text-malbec-800 mb-4">
@@ -55,70 +80,37 @@ export default function Home() {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Malbec */}
-            <div className="text-center bg-cream-50 rounded-lg shadow-xl p-8 hover:shadow-2xl transition-shado  border-malbec-800">
-              <div className="text-6xl mb-4">
-                <img src="/assets/foto-malbec.jpg" alt="Malbec" className="w-full h-70 object-cover rounded-md" />
+            {featuredWines.map((wine, index) => (
+              <div key={index} className="text-center bg-cream-50 rounded-lg shadow-xl p-8 hover:shadow-2xl transition-shadow border border-cream-200">
+                <div className="text-6xl mb-4">
+                  <img src={wine.image} alt={wine.title} className="w-full h-70 object-cover rounded-md" />
+                </div>
+                <h3 className="text-2xl font-serif font-bold text-malbec-800 mb-4">{wine.title}</h3>
+                <p className="text-malbec-600 mb-6">
+                  {wine.description}
+                </p>
+                <Link 
+                  href={wine.link} 
+                  className="text-wine-600 hover:text-wine-700 font-semibold"
+                >
+                  {wine.linkText}
+                </Link>
               </div>
-              <h3 className="text-2xl font-serif font-bold text-malbec-800 mb-4">Malbec</h3>
-              <p className="text-malbec-600 mb-6">
-                El orgullo de Mendoza. Intenso, robusto y con notas frutales que conquistan el paladar.
-              </p>
-              <Link 
-                href="/vinos#malbec" 
-                className="text-wine-600 hover:text-wine-700 font-semibold"
-              >
-                Ver Malbecs →
-              </Link>
-            </div>
-
-            {/* Cabernet Sauvignon */}
-            <div className="text-center bg-cream-50 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow border border-cream-200">
-              <div className="text-6xl mb-4">
-                <img src="/assets/foto-cabernet.jpg" alt="Cabernet Sauvignon" className="w-full h-70 object-cover rounded-md" />
-              </div>
-              <h3 className="text-2xl font-serif font-bold text-malbec-800 mb-4">Cabernet Sauvignon</h3>
-              <p className="text-malbec-600 mb-6">
-                Elegante y estructurado, con taninos suaves y un final prolongado que perdura en el tiempo.
-              </p>
-              <Link 
-                href="/vinos#cabernet" 
-                className="text-wine-600 hover:text-wine-700 font-semibold"
-              >
-                Ver Cabernets →
-              </Link>
-            </div>
-
-            {/* Chardonnay */}
-            <div className="text-center bg-cream-50 rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow border border-cream-200">
-              <div className="text-6xl mb-4">
-                <img src="/assets/foto-chardonnay.jpg" alt="Chardonnay" className="w-full h-70 object-cover rounded-md" />
-              </div>
-              <h3 className="text-2xl font-serif font-bold text-malbec-800 mb-4">Chardonnay</h3>
-              <p className="text-malbec-600 mb-6">
-                Fresco y aromático, con notas cítricas y florales que reflejan el terroir mendocino.
-              </p>
-              <Link 
-                href="/vinos#chardonnay" 
-                className="text-wine-600 hover:text-wine-700 font-semibold"
-              >
-                Ver Chardonnays →
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       <ElegantDivider />
 
-      <WaveSeparator fillColor="#4d0218" height="h-5" type="wave2" />
+
 
       {/* About Section */}
-      <section className="py-20 bg-cream-100">
+      <section className="py-20 bg-cream-100 bg-vine-pattern">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-serif font-bold text-malbec-800 mb-6">
+              <h2 className="text-4xl font-serif font-bold  text-malbec-800 mb-6">
                 Tradición y Excelencia
               </h2>
               <p className="text-lg text-malbec-700 mb-6">

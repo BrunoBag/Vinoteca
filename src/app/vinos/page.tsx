@@ -89,7 +89,7 @@ export default function VinosPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-cream-50">
+    <div className="min-h-screen bg-cream-50 bg-vine-pattern">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-wine-700 to-malbec-800 text-black">
         <div className="container mx-auto px-4">

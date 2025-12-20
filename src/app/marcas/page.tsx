@@ -77,7 +77,7 @@ export default function MarcasPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-cream-50">
+    <div className="min-h-screen bg-cream-50 bg-vine-pattern">
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-burgundy-700 to-malbec-800 text-white">
         <div className="container mx-auto px-4">
@@ -94,7 +94,7 @@ export default function MarcasPage() {
       </section>
 
       {/* Intro Section */}
-      <section className="py-16 bg-cream-100">
+      <section className="py-16 bg-cream-100 bg-vine-pattern">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-serif font-bold text-malbec-800 mb-6">
@@ -208,7 +208,7 @@ export default function MarcasPage() {
       </section>
 
       {/* Quality Promise */}
-      <section className="py-20 bg-cream-200">
+      <section className="py-20 bg-cream-200 bg-vine-pattern">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="text-6xl mb-6">🏆</div>

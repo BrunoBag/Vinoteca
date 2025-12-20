@@ -16,7 +16,7 @@ export default function ElegantDivider({
   animated = true
 }: ElegantDividerProps) {
   return (
-    <div className={`relative bg-gradient-to-r  py-16 ${className}`}>
+    <div className={`relative bg-gradient-to-r  py-10 ${className}`}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
